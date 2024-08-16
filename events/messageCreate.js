@@ -20,14 +20,14 @@ module.exports = {
 
     const mentionedUser = message.mentions.users.get(process.env.APP_ID)
     if (mentionedUser && mentionedUser.bot) {
-      console.log('Mention BOT')
+      console.log('Mencionar al BOT')
       await interact(message, message.author.id, false)
       return
     }
 
     if (message.content.includes('##secret##')) {
-      message.author.send(`Hey ${message.author.username}!`).catch((error) => {
-        console.log(`Could not send DM to ${message.author.tag}.`)
+      message.author.send(`Hola ${message.author.username}!`).catch((error) => {
+        console.log(`No se puede mandar DM para ${message.author.tag}.`)
         console.error(error)
       })
       return
