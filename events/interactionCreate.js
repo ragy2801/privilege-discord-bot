@@ -9,7 +9,7 @@ module.exports = {
 
       if (!command) {
         console.error(
-          `No command matching ${interaction.commandName} was found.`
+          `Commando ${interaction.commandName} no encontrado.`
         )
         return
       }
@@ -30,9 +30,9 @@ module.exports = {
       try {
         await interact(interaction, interaction.user.id, true)
       } catch (error) {
-        console.error('Error interacting with the API:', error)
+        console.error('Hay un error con el API:', error)
         await interaction.followUp(
-          'There was an error interacting with the API.'
+          'Hay un error con el API.'
         )
       }
     }
