@@ -2,8 +2,8 @@ const { SlashCommandBuilder } = require('discord.js')
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('hello')
-    .setDescription('Say Hi and provides information about the user.'),
+    .setName('hola')
+    .setDescription('Hola Como te puedo ayudar.'),
   async execute(interaction) {
     await interaction.deferReply({ ephemeral: true })
     await interaction.user
@@ -13,7 +13,7 @@ module.exports = {
         console.error(error)
       })
     await interaction.editReply({
-      content: `You can start talking with me in DM.`,
+      content: `Habla conmigo por DM.`,
       ephemeral: true,
     })
   },
