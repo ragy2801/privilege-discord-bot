@@ -3,12 +3,12 @@ const { interact } = require('../utils/dialogapi.js')
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('ask')
-    .setDescription('Ask Voiceflow Bot a question.')
+    .setName('pregunta')
+    .setDescription('Preguntale al bot sobre algo.')
     .addStringOption((option) =>
       option
         .setName('question')
-        .setDescription('User question to Voiceflow Bot.')
+        .setDescription('Pregunta del usuario')
         .setRequired(true)
     ),
 
