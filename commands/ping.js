@@ -3,7 +3,7 @@ const { SlashCommandBuilder } = require('discord.js')
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('ping')
-    .setDescription('Provides information about the bot.'),
+    .setDescription('Provee informaccion sobre el bot.'),
   async execute(interaction) {
     const sent = await interaction.reply({
       content: 'Pinging...',
